@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// Makes it as a SPA(single page application// 'BR as Router' gives it an alias)
-//By making Router the root component of our app, it will pass down several router-specific objects to its child components. 
-//Things like current location and url can be accessed or changed.
-// import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Router> 
     <App />
+    </Router>
   </React.StrictMode>
 );
 
