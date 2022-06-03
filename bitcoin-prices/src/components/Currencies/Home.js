@@ -1,5 +1,3 @@
-import App from "../App.css"
-
 export default function Home() {
     return (
         <div>

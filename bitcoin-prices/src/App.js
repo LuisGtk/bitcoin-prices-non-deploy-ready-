@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/Currencies/Home';
 import Currencies from './components/Currencies/Currencies';
 import './App.css';
 
@@ -30,7 +30,7 @@ function App() {
         </Routes>
         {/* route for currecy page */}
         <Routes>
-          <Route path="/Currencies" component={<Currencies/>} />
+          <Route path="/Currencies" element={<Currencies/>} />
         </Routes>
       </main>
     </div>

@@ -6,6 +6,7 @@ export default function Currencies() {
         <div>
             <h2>Select a country to see the Price of Bitcoin</h2>
             {/* using map to display the list of countries and currencies */}
+            {/*  */}
             {listOfCurrencies.map((currency, i) => {
                 return (
                     <div className="currency" key={i}>
