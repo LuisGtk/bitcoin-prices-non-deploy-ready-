@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+/* nav bar */
 nav {
   background: black;
   color: white;
@@ -22,7 +22,15 @@ nav {
 nav img{
   max-height: 50px;
   padding: 5px;
-  /* margin: 5px 20px 5px 0; */
+  margin: 5px 20px 15px 0;
   display: inline-block;
   vertical-align: middle;
+}
+/* css for the link (home page link) */
+nav a {
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.2em;
+  text-decoration: none;
 }

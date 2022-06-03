@@ -3,7 +3,7 @@ export default function Home() {
     return (
         <div>
             <h1>This is the Homepage</h1>
-            <p>Where all of your Bitcoin dreams come true</p>
+            <p>Welcome to my Bitcoin app made in React.</p>
         </div>
     )
 }
