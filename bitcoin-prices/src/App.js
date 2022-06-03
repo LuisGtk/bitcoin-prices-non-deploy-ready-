@@ -1,8 +1,10 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
+import Currencies from './components/Currencies/Currencies';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       {/* creating nav tag */}
@@ -13,13 +15,22 @@ function App() {
           {/* adding logo for header */}
           <img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" alt="Bitcoint logo"></img>
         </Link>
+
+        <Link to='/Currencies'>
+          <h1>Currencies</h1>
+        </Link>
       </nav>
+
       {/* the main tag contains the paths the applicatuion takes you to after clicking one of the many links */}
       <main>
         {/* container for the route elements */}
         <Routes>
           {/* route path specifies which component a link will take you */}
           <Route path='/' element={<Home />} />
+        </Routes>
+        {/* route for currecy page */}
+        <Routes>
+          <Route path="/Currencies" component={<Currencies/>} />
         </Routes>
       </main>
     </div>
