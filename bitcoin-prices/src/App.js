@@ -1,12 +1,13 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Redirect } from 'react-router-dom';
 import Home from './components/Currencies/Home';
 import Currencies from './components/Currencies/Currencies';
+import Price from './components/Currencies/Price/Price';
 import './App.css';
 
 function App() {
-
   return (
     <div className="App">
+
       {/* creating nav tag */}
       <nav>
         {/* Link to our homepage */}
@@ -27,13 +28,13 @@ function App() {
         <Routes>
           {/* route path specifies which component a link will take you */}
           <Route path='/' element={<Home />} />
-        </Routes>
-        {/* route for currecy page */}
-        <Routes>
-          <Route path="/Currencies" element={<Currencies/>} />
+          <Route path="/Currencies" element={<Currencies />} />
+
         </Routes>
       </main>
     </div>
   );
 }
+
+
 export default App;
