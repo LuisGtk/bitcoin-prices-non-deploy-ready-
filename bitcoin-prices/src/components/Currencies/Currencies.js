@@ -2,6 +2,7 @@ import listOfCurrencies from './list.json';
 import { Link } from 'react-router-dom'
 
 export default function Currencies() {
+    // console.log({currency})
     return (
         <div>
             <h2>Select a country to see the Price of Bitcoin</h2>

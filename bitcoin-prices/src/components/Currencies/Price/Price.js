@@ -10,7 +10,7 @@ export default function Price(props) {
         const apiEndPoint = `https://api.coindesk.com/v1/bpi/currentprice/${currency}.json`
         try {
             //fetch
-            const response = await fetch(apiEndPoint);
+            const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice/${currency}.json');
             const data = await response.json();
             setRate(data.bpi[currency].rate)
         } catch (err) {
@@ -23,9 +23,8 @@ export default function Price(props) {
 
     return (
         <div>
-            <small>{props.user.name}</small>
-            <h1>Bitcoin price in: {props.match.params.currency}</h1>
-            <p>{rate}</p>
+            <small>{props}</small>
+
         </div>
     )
 }

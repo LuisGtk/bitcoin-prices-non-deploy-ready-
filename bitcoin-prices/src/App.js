@@ -12,9 +12,9 @@ function App() {
       <nav>
         {/* Link to our homepage */}
         <Link to='/'>
-          <h1>Global Bitcoin Prices</h1>
+          <h1>Global Crypto Prices</h1>
           {/* adding logo for header */}
-          <img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" alt="Bitcoint logo"></img>
+          <img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" alt="Bitcoinlogo"></img>
         </Link>
 
         <Link to='/Currencies'>
@@ -29,7 +29,7 @@ function App() {
           {/* route path specifies which component a link will take you */}
           <Route path='/' element={<Home />} />
           <Route path="/Currencies" element={<Currencies />} />
-
+          <Route path="/Price" element={<Price />} />
         </Routes>
       </main>
     </div>
