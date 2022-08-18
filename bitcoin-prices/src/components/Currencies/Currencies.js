@@ -23,6 +23,8 @@ export default function Currencies() {
         getCrypto();
     }, [])
 
+
+    
     return crypto.length > 0 ? (
         <section className="container">
             {crypto.length &&
