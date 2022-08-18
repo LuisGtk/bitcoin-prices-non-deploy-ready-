@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Currencies from './components/Currencies/Currencies';
+import Fiat from './components/Fiat/Fiat';
 import './App.css';
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         <Link to='/Currencies'>
           <h1>Crypto-Currencies</h1>
         </Link>
+        <Link to='/Fiat'>
+          <h1>Fiat-Currencies</h1>
+        </Link>
       </nav>
       {/* the main tag contains the paths the applicatuion takes you to after clicking one of the many links */}
       <main>
@@ -24,6 +28,7 @@ function App() {
           {/* route path specifies which component a link will take you */}
           <Route path='/' element={<Home />} />
           <Route path="/Currencies" element={<Currencies />} />
+          <Route path="/Fiat" element={<Fiat />} />
         </Routes>
       </main>
     </div>

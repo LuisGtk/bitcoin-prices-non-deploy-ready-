@@ -2,7 +2,7 @@ import './Currencies.css';
 import { useEffect, useState } from "react";
 
 export default function Currencies() {
-    const [search, setSearch] = useState("");
+    // const [search, setSearch] = useState("");
     const [crypto, setCrypto] = useState([]);
 
 
