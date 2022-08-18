@@ -22,7 +22,7 @@ export default function Currencies() {
         };
         getCrypto();
     }, [])
-    
+
     return crypto.length > 0 ? (
         <section className="container">
             {crypto.length &&
@@ -30,7 +30,7 @@ export default function Currencies() {
                     return (
                         <div className='container'>
                             <div className='background'>
-                                <img src={crypto.icon}></img>
+                                <img src={crypto.icon} alt="crypto_currency"></img>
                                 <h2>{crypto.name}</h2>
                                 <p>Crypto Price:{crypto.price}</p>
                                 <p>Volume:{crypto.volume}</p>

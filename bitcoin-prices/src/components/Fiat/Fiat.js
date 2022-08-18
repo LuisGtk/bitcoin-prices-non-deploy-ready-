@@ -27,7 +27,7 @@ export default function Fiat() {
                 fiat.map((fiat) => {
                     return (
                         <div className='container'>
-                            <img src={fiat.imageUrl}></img>
+                            <img src={fiat.imageUrl} alt='country_flag'></img>
                             <h2 className="cur">Currency:{fiat.name}</h2>
                             <p className="rate">Rate:{fiat.rate}</p>
                         </div>
