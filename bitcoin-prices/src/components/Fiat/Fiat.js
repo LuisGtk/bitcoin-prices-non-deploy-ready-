@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./Fiat.css"
 export default function Fiat() {
 
     const [fiat, setFiat] = useState([]);
@@ -30,9 +30,8 @@ export default function Fiat() {
                     return (
                         <div className='container'>
                             <img src={fiat.imageUrl}></img>
-                            <h2>{fiat.name}</h2>
-                            <p>Crypto Price:{fiat.rate}</p>
-                            <p>Volume:{fiat.symbol}</p>
+                            <h2>Currency:{fiat.name}</h2>
+                            <p>Rate:{fiat.rate}</p>
                         </div>
                     )
                 })}
