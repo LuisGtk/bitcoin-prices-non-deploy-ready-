@@ -28,13 +28,14 @@ export default function Currencies() {
             {crypto.length &&
                 crypto.map((crypto) => {
                     return (
-                        <>
-                            <img src={crypto.icon}></img>
-                            <h2>{crypto.id}</h2>
-                            <p>{crypto.price}</p>
-                            <p>{crypto.volume}</p>
-                            {/* <p>{crypto.princeBtc}</p> */}
-                        </>
+                        <div className='container'>
+                            <div className='background'>
+                                <img src={crypto.icon}></img>
+                                <h2>{crypto.id}</h2>
+                                <p>Crypto Price:{crypto.price}</p>
+                                <p>Volume:{crypto.volume}</p>
+                            </div>
+                        </div>
                     )
                 })}
 

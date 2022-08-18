@@ -1,19 +1,12 @@
-input {
-    font-size: 40px;
+.container {
+    padding: 2%;
 }
 
-thead {
-    background-color: rgb(44, 44, 44);
-    color: white;
-    text-align: center;
-}
-
-td {
-    justify-content: center;
-}
-
-table {
-    width: 1000px;
-    border-collapse: separate;
-    border-spacing: 0 1em;
+.background {
+    margin: 2%;
+    background-color: gray;
+    padding: 3%;
+    width: 30%;
+    margin-left: 30%;
+    border-radius: 5%;
 }
