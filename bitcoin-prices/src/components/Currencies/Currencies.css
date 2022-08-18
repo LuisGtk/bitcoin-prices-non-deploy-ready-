@@ -1,16 +1,19 @@
-input{
+input {
     font-size: 40px;
 }
-thead{
+
+thead {
     background-color: rgb(44, 44, 44);
     color: white;
     text-align: center;
 }
-td{
+
+td {
     justify-content: center;
 }
-table{
+
+table {
     width: 1000px;
     border-collapse: separate;
     border-spacing: 0 1em;
-  }
+}

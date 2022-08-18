@@ -11,9 +11,9 @@ export default function Currencies() {
             const apiURL = "https://api.coinstats.app/public/v1/coins?skip=0&limit=100¤cy=INR"
             try {
                 const res = await fetch(apiURL);
-                const data = await res.json();
-                // console.log(data)
-                const objectData = Object.values(data)[0];
+                const crypto = await res.json();
+                // console.log(crypto)
+                const objectData = Object.values(crypto)[0];
                 setCrypto(objectData);
                 console.log(objectData);
             } catch (err) {
@@ -23,27 +23,31 @@ export default function Currencies() {
         getCrypto();
     }, [])
 
+    return crypto.length > 0 ? (
+        <section className="container">
+            {crypto.length &&
+                crypto.map((crypto) => {
+                    return (
+                        <>
+                            <img src={crypto.icon}></img>
+                            <h2>{crypto.id}</h2>
+                            <p>{crypto.price}</p>
+                            <p>{crypto.volume}</p>
+                            {/* <p>{crypto.princeBtc}</p> */}
+                        </>
+                    )
+                })}
 
-    return (
-        <div>
-            <input
-                type="text"
-                placeholder="Search..."
-                onChange={(e) => {
-                    setSearch(e.target.value);
-                }}
-            />
-            <table>
-                <thead>
-                    <tr>
-                        <td>Symbol:</td>
-                        <td>Name:</td>
-                        <td>Symbol:</td>
-                        <td>Price:</td>
-                        <td>Volume(24hrs):</td>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+
+
+
+
+
+
+
+
+        </section>
+    ) : (
+        <h1>loading...</h1>
     );
 }

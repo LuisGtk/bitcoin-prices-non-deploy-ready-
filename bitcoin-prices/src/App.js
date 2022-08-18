@@ -10,12 +10,11 @@ function App() {
       <nav>
         {/* Link to our homepage */}
         <Link to='/'>
-          <h1>Global Crypto Prices</h1>
+          <h1>U.S Crypto Prices</h1>
           {/* adding logo for header */}
-          <img src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png" alt="Bitcoinlogo"></img>
         </Link>
         <Link to='/Currencies'>
-          <h1>Currencies</h1>
+          <h1>Crypto-Currencies</h1>
         </Link>
       </nav>
       {/* the main tag contains the paths the applicatuion takes you to after clicking one of the many links */}
