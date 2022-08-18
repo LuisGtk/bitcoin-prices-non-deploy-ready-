@@ -21,8 +21,6 @@ export default function Fiat() {
         getFiat();
     }, [])
 
-
-
     return fiat.length > 0 ? (
         <section className="container">
             {fiat.length &&
@@ -30,8 +28,8 @@ export default function Fiat() {
                     return (
                         <div className='container'>
                             <img src={fiat.imageUrl}></img>
-                            <h2>Currency:{fiat.name}</h2>
-                            <p>Rate:{fiat.rate}</p>
+                            <h2 className="cur">Currency:{fiat.name}</h2>
+                            <p className="rate">Rate:{fiat.rate}</p>
                         </div>
                     )
                 })}

@@ -22,7 +22,7 @@ export default function Currencies() {
         };
         getCrypto();
     }, [])
-
+    
     return crypto.length > 0 ? (
         <section className="container">
             {crypto.length &&
@@ -41,15 +41,6 @@ export default function Currencies() {
                         </div>
                     )
                 })}
-
-
-
-
-
-
-
-
-
         </section>
     ) : (
         <h1>loading...</h1>

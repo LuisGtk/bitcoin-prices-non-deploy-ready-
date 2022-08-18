@@ -5,7 +5,7 @@ export default function Home() {
 
     useEffect(() => {
         const getNews = async () => {
-            const apiURL = "https://api.coinstats.app/public/v1/news?skip=0&limit=5"
+            const apiURL = "https://api.coinstats.app/public/v1/news?skip=0&limit=10"
             try {
                 const res = await fetch(apiURL);
                 const news = await res.json();
@@ -18,7 +18,7 @@ export default function Home() {
             }
         };
         getNews();
-    
+
     }, [])
 
     return news.length > 0 ? (
@@ -26,10 +26,14 @@ export default function Home() {
             {news.length &&
                 news.map((news) => {
                     return (
-                        <div className='container'>
-                            <h2 src={news.title}></h2>
-                            {/* <p>description:{news.description}</p> */}
-                            <p>Source:{news.source}</p>
+                        <div className='homeContainer'>
+                            <div className='outline'>
+                                <h1 className='title'>{news.title}</h1>
+                                {/* <img src={news.imgURL}></img> */}
+                                <p className='desc'>Description: {news.description} <a 
+                                    href={news.link}>Read the full article here</a></p>
+                                <p className='src'>Source: {news.source}</p>
+                            </div>
                         </div>
                     )
                 })}
@@ -38,9 +42,3 @@ export default function Home() {
         <h1>loading...</h1>
     );
 }
-
-    // return (
-    //     <div>
-    //         <h1>Welcome to my Crypto app made in React.</h1>
-    //     </div>
-    // )

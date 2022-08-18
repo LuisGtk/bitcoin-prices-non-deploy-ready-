@@ -11,7 +11,7 @@ function App() {
       <nav>
         {/* Link to our homepage */}
         <Link to='/'>
-          <h1>U.S Crypto Prices</h1>
+          <h1>Home-Page</h1>
           {/* adding logo for header */}
         </Link>
         <Link to='/Currencies'>
